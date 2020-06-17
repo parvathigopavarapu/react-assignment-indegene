@@ -8,12 +8,12 @@ function Navbar() {
         <div className="container">
           <div className="navbar-header">
             <Link className="navbar-brand text-white text-lg brand-text" to="/">
-              Movie Info
+              First Tab
             </Link>
           </div>
           <div className="navbar-header">
             <Link className="navbar-brand text-white text-lg brand-text" to="/movie">
-              Search Movie
+              Secound Tab
             </Link>
           </div>
         </div>

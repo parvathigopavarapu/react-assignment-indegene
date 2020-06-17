@@ -7,9 +7,10 @@ import Home from './components/Home'
 import Movie from './components/Movie'
 import Navbar from './components/Navbar';
 import store from './redux/store';
-import MovieInfo from './components/MovieInfo'
+import MovieInfo from './components/MovieInfo';
+import Modal from 'react-modal'
 
-
+Modal.setAppElement('#root')
 function App() {
   return (
     <Provider store={store}>

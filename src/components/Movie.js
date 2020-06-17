@@ -6,8 +6,7 @@ import { fetchMovie, setLoading } from '../redux/searchActions';
 
 export class Movie extends Component {
   componentDidMount() {
-    this.props.fetchMovie(this.props.match.params.id);
-    // this.props.fetchMovie(this.props.id)
+    this.props.fetchMovie(this.props.id);
     this.props.setLoading();
   }
   render() {
