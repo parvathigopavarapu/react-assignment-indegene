@@ -8,7 +8,6 @@ export class MoviesContainer extends Component {
   render() {
 
     const { movies } = this.props;
-    console.log('props are' + JSON.stringify(this.props))
     let content = '';
 
     content =
@@ -16,7 +15,9 @@ export class MoviesContainer extends Component {
         ? movies.map((movie, index) => (
             <MovieCard key={index} movie={movie} />
           ))
-        : null;
+        :<h3 className="display-4 mb-3 text-danger text-center App">
+        <i className="fa fa-search" /> OOps! No Movies Found!
+      </h3>
     return <div className="row mt-5">{content}</div>;
   }
 }
