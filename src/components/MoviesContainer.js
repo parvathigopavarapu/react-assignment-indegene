@@ -17,11 +17,11 @@ export class MoviesContainer extends Component {
     let content = '';
     const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
     const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
-    const currentPosts = movies.slice(indexOfFirstPost, indexOfLastPost)
+    // const currentPosts = movies.slice(indexOfFirstPost, indexOfLastPost)
     const paginate = (pageNumber) =>this.setState({currentPage:pageNumber})
 
     content =
-      currentPosts != null
+    movies != null
         ? movies.map((movie, index) => (
          <MovieCard key={index} movie={movie} />
           

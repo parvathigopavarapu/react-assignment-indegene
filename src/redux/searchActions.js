@@ -23,7 +23,7 @@ export const fetchMovies = (text, year) => dispatch => {
  export const fetchAllMoviesDetails = (text, year) => dispatch => {
   let new_array = [];
   fetch(`https://www.omdbapi.com/?apikey=${APIKey}&s=${text}&y=${year}`).then(
-    res => res.json()).then(data => data.Search.map(movie => {
+    res => res.json()).then(data => data.Search != null ? data.Search.map(movie => {
     axios.get(`https://www.omdbapi.com/?apikey=${APIKey}&i=${movie.imdbID}`)
     .then(response => 
    {  
@@ -35,7 +35,7 @@ export const fetchMovies = (text, year) => dispatch => {
     ).catch(err => 
       console.log(err)
       )
-  }))
+  }) : null)
 };
 
 

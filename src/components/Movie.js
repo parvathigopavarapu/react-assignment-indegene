@@ -58,7 +58,9 @@ export class Movie extends Component {
             </div>
           </div>
         ))
-        : null
+        :  <h3 className="display-4 mb-3 text-danger text-center App">
+        <i className="fa fa-search" /> OOps! No Movies Found!
+    </h3>
 
     );
 
