@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import {
   searchMovie,
   fetchMovies,
-  setLoading
+  setLoading,
+  fetchAllMoviesDetails
 } from '../redux/searchActions';
 
 export class SearchForm extends Component {
@@ -26,6 +27,7 @@ export class SearchForm extends Component {
     
     e.preventDefault();
     this.props.fetchMovies(this.state.text, this.state.year);
+    this.props.fetchAllMoviesDetails(this.state.text, this.state.year);
     this.props.setLoading();
   };
 
@@ -61,7 +63,6 @@ export class SearchForm extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log(JSON.stringify(state))
     return {
        text: state.text
     }
@@ -69,5 +70,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { searchMovie, fetchMovies, setLoading }
+  { searchMovie, fetchMovies, fetchAllMoviesDetails, setLoading }
 )(SearchForm);

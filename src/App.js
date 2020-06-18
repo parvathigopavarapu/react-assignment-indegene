@@ -7,7 +7,7 @@ import Home from './components/Home'
 import Movie from './components/Movie'
 import Navbar from './components/Navbar';
 import store from './redux/store';
-import MovieInfo from './components/MovieInfo';
+import SecoundTab from './components/SecoundTab.js';
 import Modal from 'react-modal'
 
 Modal.setAppElement('#root')
@@ -18,7 +18,7 @@ function App() {
           <div>
             <Navbar />
             <Route exact path="/" component={Home} />
-            <Route exact path="/movie" component={MovieInfo} />
+            <Route exact path="/movie" component={SecoundTab} />
             <Route exact path="/movie/:id" component={Movie} />
             
           </div>

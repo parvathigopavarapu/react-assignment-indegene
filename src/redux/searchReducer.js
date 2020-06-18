@@ -1,13 +1,14 @@
 import {
     SEARCH_MOVIE,
     FETCH_MOVIES,
-    FETCH_MOVIE,LOADING
+    FETCH_MOVIE,LOADING,FETCH_MOVIE_DETAILS
   } from '../redux/types';
   
   const initialState = {
     text: '',
     movies: [],
     movie: [],
+    movies_info:[],
     loading:false
   };
 
@@ -31,6 +32,12 @@ import {
                   movie: action.payload,
                   loading:false 
                 };
+                case FETCH_MOVIE_DETAILS:
+                  return {
+                    ...state,
+                    movies_info: action.payload,
+                    loading:false 
+                  };
                 case LOADING:
                   return {
                     ...state,

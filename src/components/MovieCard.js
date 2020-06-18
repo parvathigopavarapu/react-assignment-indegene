@@ -66,7 +66,7 @@ export class MovieCard extends Component {
           </div>
             {/* <Movie  id={movie.imdbID}/> */}
             <div>
-              <button className="btn btn-warning mt-2 btn-block"
+              <button className="btn btn-primary mt-2 btn-block"
               onClick={() => this.setState({modalIsOpen:false})}>
                 Close
               </button>

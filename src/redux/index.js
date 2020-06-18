@@ -1,1 +1,1 @@
-export {searchMovie, fetchMovies, fetchMovie, setLoading} from './searchActions'
+export {searchMovie, fetchMovies, fetchMovie, setLoading, fetchAllMoviesDetails} from './searchActions'
